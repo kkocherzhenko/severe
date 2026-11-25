@@ -1,7 +1,7 @@
 /* Color tokens, fonts and base components. Dark only. */
 :root {
   --bg: #000000; --surface: #050A05; --surface-raised: #0B160B; --line: #003B00;
-  --green: #00FF41; --green-dim: #008F11; --text: #D6FFD9; --text-2: #5FBF6A;
+  --green: #00FF41; --green-dim: #008F11; --text: #FFFFFF; --text-2: #B3B3B3;
   --red: #FF2B2B; --blue: #2F6BFF;
   --glow: rgba(0, 255, 65, .6);
   --mono: ui-monospace, "SF Mono", Menlo, monospace;
@@ -16,7 +16,7 @@ body { margin: 0; background: var(--bg); color: var(--text); font: 14px/1.4 var(
 h1 { font: 900 42px/.95 var(--head); font-stretch: condensed; text-transform: uppercase;
   letter-spacing: -1px; margin: 8px 0; }
 .label, .group { font: 400 12px/1.5 var(--mono); letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-2); }
-.group { color: var(--green-dim); margin: 20px 0 8px; }
+.group { color: var(--text-2); margin: 20px 0 8px; }
 .ru { display: block; font: 700 15px/1.25 var(--head); }
 .en { display: block; font-size: 12px; color: var(--text-2); }
 
@@ -25,12 +25,12 @@ button { font: inherit; color: inherit; cursor: pointer; }
 button:disabled { opacity: .5; }
 :focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
 .btn { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px;
-  padding: 8px 14px; background: var(--bg); border: 1px solid var(--green); border-radius: 3px; color: var(--green);
+  padding: 8px 14px; background: var(--bg); border: 1px solid var(--green); border-radius: 3px; color: var(--text);
   font: 700 14px var(--mono); letter-spacing: 1px; text-decoration: none; text-align: center; }
 .btn.primary { background: var(--green); color: #000; }
 .btn.danger { background: var(--red); border-color: var(--red); color: #000; }
 .btn.danger-line { border-color: var(--red); color: var(--red); }
-.btn.dashed { border: 1px dashed var(--line); color: var(--green-dim); }
+.btn.dashed { border: 1px dashed var(--line); color: var(--text-2); }
 .btn.wide { display: flex; width: 100%; margin: 8px 0; }
 .btn.small { font-size: 12px; }
 .btn.big { flex: 1; min-height: 56px; font-size: 20px; }

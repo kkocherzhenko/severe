@@ -9,18 +9,17 @@ main { max-width: 640px; margin: 0 auto;
 nav { position: fixed; inset: auto 0 0 0; display: flex; background: #000; border-top: 1px solid var(--line);
   padding-bottom: env(safe-area-inset-bottom); z-index: 5; }
 nav a { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 8px 0 6px;
-  color: var(--green-dim); text-decoration: none; font-size: 11px; letter-spacing: 1px; }
-nav svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: square; }
-nav a[aria-current] { color: var(--green); text-shadow: 0 0 6px var(--glow); }
-nav a[aria-current] svg { filter: drop-shadow(0 0 3px var(--glow)); }
+  color: var(--text-2); text-decoration: none; font-size: 11px; letter-spacing: 1px; }
+nav svg { width: 24px; height: 24px; fill: none; stroke: var(--green-dim); stroke-width: 2; stroke-linecap: square; }
+nav a[aria-current] { color: var(--text); }
+nav a[aria-current] svg { stroke: var(--green); filter: drop-shadow(0 0 3px var(--glow)); }
 
-.logo { font: 900 18px var(--head); color: var(--green); }
-.logo span { text-shadow: 0 0 8px var(--glow); }
+.logo { font: 900 18px var(--head); color: var(--text); }
 .workout { display: flex; align-items: flex-end; gap: 14px; font: 900 40px/.9 var(--head); letter-spacing: -1px; }
-.letter { font-size: 112px; line-height: .82; color: var(--green); text-shadow: 0 0 16px var(--glow); }
+.letter { font-size: 112px; line-height: .82; color: var(--text); }
 .letter.word { font-size: 96px; }
 .status { margin-top: 12px; font-size: 12px; letter-spacing: 1px; color: var(--text-2); }
-.count { font-weight: 700; color: var(--green); letter-spacing: 1px; }
+.count { font-weight: 700; color: var(--text); letter-spacing: 1px; }
 button.reminder { width: 100%; min-height: 44px; background: none; border: 0; border-left: 2px solid var(--red); text-align: left; }
 
 /* Alternatives sit side by side on wide screens and stack on a phone, like the approved mockup. */
@@ -42,7 +41,7 @@ button.badge { min-height: 32px; padding: 2px 10px; }
 .done[aria-checked="true"] { background: var(--green); border-color: var(--green); }
 .done[aria-checked="true"]::after { content: "✓"; }
 .addnote { display: inline-block; min-height: 32px; margin: 8px 8px 0 0; padding: 2px 10px; background: none;
-  border: 1px dashed var(--line); color: var(--green-dim); font-size: 11px; letter-spacing: 1px; }
+  border: 1px dashed var(--line); color: var(--text-2); font-size: 11px; letter-spacing: 1px; }
 .addnote.blue { border-color: var(--blue); color: var(--text); }
 .note-form { display: flex; gap: 4px; margin-top: 8px; }
 .note-form input { flex: 1; min-width: 0; border-color: var(--red); color: #FFD0D0; }
@@ -54,7 +53,7 @@ button.badge { min-height: 32px; padding: 2px 10px; }
 .chip[aria-pressed="true"] { background: var(--green); border-color: var(--green); color: #000; }
 
 .head { display: flex; gap: 12px; align-items: center; margin: 8px 0; }
-.hero, .onerm { font: 700 40px/1.2 var(--mono); color: var(--green); text-shadow: 0 0 10px var(--glow); }
+.hero, .onerm { font: 700 40px/1.2 var(--mono); color: var(--text); }
 .onerm { font-size: 24px; margin: 16px 0 8px; }
 .log { border-bottom: 1px solid var(--line); padding: 10px 0; }
 .edit { border: 1px solid var(--line); background: var(--surface); padding: 10px; margin-bottom: 10px; }
@@ -67,18 +66,17 @@ button.badge { min-height: 32px; padding: 2px 10px; }
   overscroll-behavior: contain; background: var(--surface-raised); border-top: 1px solid var(--green);
   padding: 8px 16px calc(env(safe-area-inset-bottom) + 20px); outline: none; }
 .sheet-top { display: flex; justify-content: space-between; align-items: center; }
-.x { width: 44px; height: 44px; background: none; border: 0; color: var(--green); font-size: 26px; }
+.x { width: 44px; height: 44px; background: none; border: 0; color: var(--text); font-size: 26px; }
 .dialog { max-width: 420px; background: var(--surface-raised); border: 1px solid var(--green); padding: 16px; }
 .dialog .row .btn { flex: 1; }
 .previous { border: 1px solid var(--line); padding: 8px 10px; margin: 10px 0; }
 .weight { text-align: center; }
-input.bignum, .bignum { width: 100%; text-align: center; font: 700 64px/1.2 var(--mono); color: var(--green);
-  text-shadow: 0 0 12px var(--glow); background: #000; }
+input.bignum, .bignum { width: 100%; text-align: center; font: 700 64px/1.2 var(--mono); color: var(--text); background: #000; }
 .bignum.full { font-size: 36px; padding: 18px 0; }
 .under { text-align: center; color: var(--text-2); }
 .stepper { display: grid; grid-template-columns: 1fr 44px 48px 44px; align-items: center; gap: 6px; margin: 10px 0; }
-.stepper output { text-align: center; font-size: 24px; color: var(--green); }
-.sq { min-width: 44px; height: 44px; background: #000; border: 1px solid var(--green); border-radius: 3px; color: var(--green); font-size: 20px; }
+.stepper output { text-align: center; font-size: 24px; color: var(--text); }
+.sq { min-width: 44px; height: 44px; background: #000; border: 1px solid var(--green); border-radius: 3px; color: var(--text); font-size: 20px; }
 .btn.primary.sq { background: var(--green); color: #000; }
 .icongrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); gap: 6px; max-height: 240px; overflow-y: auto; }
 .pickicon { display: flex; justify-content: center; padding: 2px; background: #000; border: 1px solid transparent; }
@@ -89,8 +87,8 @@ input.bignum, .bignum { width: 100%; text-align: center; font: 700 64px/1.2 var(
 .toast { z-index: 30; border-color: var(--red); }
 .update { z-index: 8; display: flex; justify-content: space-between; align-items: center; }
 .record { position: fixed; inset: 0; z-index: 40; display: flex; flex-direction: column; align-items: center;
-  justify-content: center; background: #000; color: var(--green); text-align: center; animation: fade .25s ease-out; }
+  justify-content: center; background: #000; color: var(--text); text-align: center; animation: fade .25s ease-out; }
 .record h1 { font-size: 64px; }
-.record .kg { font-size: 44px; font-weight: 700; text-shadow: 0 0 16px var(--glow); }
+.record .kg { font-size: 44px; font-weight: 700; }
 @keyframes fade { from { opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .flash { animation: none; } }
